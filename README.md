@@ -8,6 +8,8 @@ A local AI assistant for your Mac. No cloud. No noise. Just commands.
 
 Website: https://acast.github.io/clama/
 
+The website includes a TON donation QR for direct support.
+
 ![Clama demo](docs/demo.gif)
 
 ## What it is
