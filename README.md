@@ -8,6 +8,8 @@ A local AI assistant for your Mac. No cloud. No noise. Just commands.
 
 Website: https://acast.github.io/clama/
 
+![Clama demo](docs/demo.gif)
+
 ## What it is
 
 Clama is a small CLI assistant for macOS that talks to a local Ollama model through the OpenAI-compatible API. It understands natural language in English and Russian, opens apps, controls music, reads files, and remembers simple facts.

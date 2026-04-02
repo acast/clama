@@ -68,6 +68,7 @@ body {
 
 .hero,
 .strip,
+.demo,
 .commands,
 .footer-card {
   border: 1px solid var(--line);
@@ -272,6 +273,28 @@ h3 {
   border-radius: 28px;
 }
 
+.demo {
+  margin-top: 18px;
+  padding: 24px 26px 28px;
+  border-radius: 28px;
+}
+
+.demo-card {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 26px;
+  border: 1px solid rgba(20, 26, 45, 0.08);
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.demo-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
 .feature-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -363,17 +386,10 @@ h3 {
   animation-delay: 80ms;
 }
 
-.strip {
-  animation-delay: 180ms;
-}
-
-.commands {
-  animation-delay: 280ms;
-}
-
-.footer-card {
-  animation-delay: 360ms;
-}
+.strip { animation-delay: 180ms; }
+.demo { animation-delay: 240ms; }
+.commands { animation-delay: 300ms; }
+.footer-card { animation-delay: 360ms; }
 
 @media (max-width: 980px) {
   .hero,
@@ -400,6 +416,7 @@ h3 {
 
   .hero,
   .strip,
+  .demo,
   .commands,
   .footer-card {
     border-radius: 22px;
@@ -410,6 +427,7 @@ h3 {
   }
 
   .strip,
+  .demo,
   .commands,
   .footer-card {
     padding-left: 16px;
@@ -428,6 +446,7 @@ h3 {
 
   .hero,
   .strip,
+  .demo,
   .commands,
   .footer-card,
   .button,
