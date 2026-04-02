@@ -223,132 +223,20 @@ h3 {
   padding: 14px;
 }
 
-.logo-stage {
-  position: relative;
-  width: min(100%, 420px);
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
+.logo-frame {
+  width: min(100%, 520px);
+  padding: 18px;
+  border: 1px solid rgba(20, 26, 45, 0.08);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 56px rgba(45, 52, 72, 0.08);
 }
 
-.logo-orb {
-  position: absolute;
-  width: 62%;
-  height: 48%;
-  background:
-    radial-gradient(circle at 28% 28%, rgba(255, 255, 255, 0.48), transparent 22%),
-    linear-gradient(90deg, var(--accent-pink), var(--accent-violet) 35%, var(--accent-blue) 72%, var(--accent-cyan));
-  border-radius: 44% 56% 50% 50% / 56% 48% 52% 44%;
-  filter: drop-shadow(0 18px 42px rgba(90, 65, 180, 0.18));
-  transform: translateY(-8%);
-}
-
-.logo-bubble {
-  position: absolute;
-  right: 16%;
-  bottom: 19%;
-  width: 18%;
-  height: 13%;
-  background: linear-gradient(90deg, var(--accent-violet), var(--accent-blue));
-  border-radius: 0 100% 100% 100%;
-  transform: rotate(34deg);
-  filter: drop-shadow(0 10px 18px rgba(90, 65, 180, 0.08));
-}
-
-.logo-mascot {
-  position: relative;
-  width: 58%;
-  height: 64%;
-  transform: translateY(-2%);
-}
-
-.head {
-  position: absolute;
-  inset: 22% 17% 0;
-  border-radius: 48% 48% 52% 52% / 42% 42% 58% 58%;
-  background:
-    radial-gradient(circle at 50% 32%, rgba(255, 255, 255, 0.86), rgba(255, 235, 226, 0.92) 48%, #f2ded0 76%);
-  box-shadow:
-    inset 0 -8px 18px rgba(160, 96, 70, 0.08),
-    0 14px 30px rgba(70, 36, 92, 0.08);
-}
-
-.hair {
-  position: absolute;
-  left: 30%;
-  right: 26%;
-  top: 14%;
-  height: 24%;
-  background: radial-gradient(circle at 50% 0%, #fff7f0 0%, #f7e5d8 58%, #eed6c6 100%);
-  border-radius: 52% 48% 58% 42% / 52% 58% 42% 48%;
-  transform: rotate(-8deg);
-  filter: drop-shadow(0 6px 10px rgba(110, 62, 40, 0.06));
-}
-
-.ear {
-  position: absolute;
-  top: 0;
-  width: 14%;
-  height: 36%;
-  border-radius: 60% 40% 48% 52% / 30% 24% 76% 70%;
-  background: linear-gradient(180deg, #f7e4d8 0%, #eab6a4 100%);
-  box-shadow: inset 0 -4px 10px rgba(143, 70, 63, 0.08);
-}
-
-.ear::after {
-  content: "";
-  position: absolute;
-  inset: 15% 22% 16%;
-  border-radius: inherit;
-  background: linear-gradient(180deg, rgba(255, 252, 249, 0.9), rgba(248, 203, 188, 0.82));
-}
-
-.ear-left {
-  left: 22%;
-  transform: rotate(-12deg);
-}
-
-.ear-right {
-  right: 22%;
-  transform: rotate(12deg);
-}
-
-.eye {
-  position: absolute;
-  top: 51%;
-  width: 11%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(circle at 38% 35%, white 0 15%, #21487a 16% 48%, #0c2342 49% 100%);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.16);
-}
-
-.eye::after {
-  content: "";
-  position: absolute;
-  inset: 16% 18%;
-  border-radius: 50%;
-  background: white;
-  opacity: 0.8;
-}
-
-.eye-left {
-  left: 29%;
-}
-
-.eye-right {
-  right: 29%;
-}
-
-.mouth {
-  position: absolute;
-  left: 50%;
-  top: 67%;
-  width: 16%;
-  height: 10%;
-  transform: translateX(-50%);
-  border-bottom: 4px solid #8d463d;
-  border-radius: 0 0 999px 999px;
+.hero-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .hero-caption {
