@@ -8,12 +8,16 @@
       name="description"
       content="Clama — локальный помощник для macOS и Ollama. Открывает приложения, управляет музыкой, читает файлы и запоминает простые факты."
     />
-    <meta name="theme-color" content="#08111f" />
+    <meta name="theme-color" content="#f7f4ef" />
+    <link
+      rel="icon"
+      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop stop-color="%2322d3c5"/><stop offset="55%" stop-color="%237b4dff"/><stop offset="100%" stop-color="%23e01ed3"/></linearGradient></defs><rect width="64" height="64" rx="18" fill="%23fff"/><path d="M14 18c0-2 1.6-3.6 3.6-3.6h28.8C48.4 14.4 50 16 50 18v17.3c0 2-1.6 3.6-3.6 3.6H29.5L18 50v-11.1h-0.4C15.6 38.9 14 37.3 14 35.3V18Z" fill="url(%23g)"/></svg>'
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="bg bg-1"></div>
-    <div class="bg bg-2"></div>
+    <div class="ambient ambient-1"></div>
+    <div class="ambient ambient-2"></div>
     <main class="page">
       <section class="hero">
         <div class="hero-copy">
@@ -37,38 +41,46 @@ clama "привет"</code></pre>
           </div>
         </div>
 
-        <aside class="terminal-card" aria-label="Примеры команд Clama">
-          <div class="terminal-top">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+        <aside class="hero-art" aria-hidden="true">
+          <div class="logo-stage">
+            <div class="logo-orb"></div>
+            <div class="logo-bubble"></div>
+            <div class="logo-mascot">
+              <span class="ear ear-left"></span>
+              <span class="ear ear-right"></span>
+              <span class="head"></span>
+              <span class="hair"></span>
+              <span class="eye eye-left"></span>
+              <span class="eye eye-right"></span>
+              <span class="mouth"></span>
+            </div>
           </div>
-          <div class="terminal-body">
-            <p><span>&gt;</span> открой safari</p>
-            <p class="reply">Opened Safari.</p>
-            <p><span>&gt;</span> следующий трек</p>
-            <p class="reply">Music is playing.</p>
-            <p><span>&gt;</span> что в буфере обмена</p>
-            <p class="reply">hello again</p>
-            <p><span>&gt;</span> сколько свободного места на диске</p>
-            <p class="reply">Free disk space: 15 GB of 460 GB available.</p>
+          <div class="hero-caption">
+            <span class="caption-chip">Clama</span>
+            <p>Белая витрина для светлого продукта и теплого локального ассистента.</p>
           </div>
         </aside>
       </section>
 
-      <section class="features">
-        <article class="feature">
-          <h2>Открывает и управляет</h2>
-          <p>Finder, Safari, Downloads, Documents, Pictures, Music и системные действия вроде громкости.</p>
-        </article>
-        <article class="feature">
-          <h2>Помнит простое</h2>
-          <p>Имя, предпочтения, последние действия и открытые приложения сохраняются между запусками.</p>
-        </article>
-        <article class="feature">
-          <h2>Не тратит лишнее</h2>
-          <p>Работает через Ollama и локальные инструменты. Это больше похоже на полезный терминальный ассистент, чем на чат.</p>
-        </article>
+      <section class="strip">
+        <div class="strip-head">
+          <p class="eyebrow">Что делает хорошо</p>
+          <h2>Простые команды, которые работают без лишнего контекста.</h2>
+        </div>
+        <div class="feature-list">
+          <article class="feature">
+            <h3>Открывает и управляет</h3>
+            <p>Finder, Safari, Downloads, Documents, Pictures, Music и системные действия вроде громкости.</p>
+          </article>
+          <article class="feature">
+            <h3>Помнит простое</h3>
+            <p>Имя, предпочтения, последние действия и открытые приложения сохраняются между запусками.</p>
+          </article>
+          <article class="feature">
+            <h3>Не тратит лишнее</h3>
+            <p>Работает через Ollama и локальные инструменты. Это больше похоже на полезный терминальный ассистент, чем на чат.</p>
+          </article>
+        </div>
       </section>
 
       <section class="commands">
