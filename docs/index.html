@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clama — локальный ассистент для macOS и Ollama</title>
+    <meta
+      name="description"
+      content="Clama — локальный помощник для macOS и Ollama. Открывает приложения, управляет музыкой, читает файлы и запоминает простые факты."
+    />
+    <meta name="theme-color" content="#08111f" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg bg-1"></div>
+    <div class="bg bg-2"></div>
+    <main class="page">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Локальный ассистент для macOS и Ollama</p>
+          <h1>Clama</h1>
+          <p class="tagline">Команды, которые остаются на твоем Mac.</p>
+          <p class="lede">
+            Clama понимает обычные фразы вроде <span>открой Safari</span>, <span>следующий трек</span>,
+            <span>что я делал?</span> и выполняет их локально, без лишней болтовни и без облачного шума.
+          </p>
+          <div class="cta-row">
+            <a class="button button-primary" href="https://github.com/acast/clama" target="_blank" rel="noreferrer">
+              Open source on GitHub
+            </a>
+            <button class="button button-secondary" id="copy-command" type="button">Скопировать стартовую команду</button>
+          </div>
+          <div class="quick-start">
+            <div class="code-label">Быстрый старт</div>
+            <pre><code>npm link
+clama "привет"</code></pre>
+          </div>
+        </div>
+
+        <aside class="terminal-card" aria-label="Примеры команд Clama">
+          <div class="terminal-top">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div class="terminal-body">
+            <p><span>&gt;</span> открой safari</p>
+            <p class="reply">Opened Safari.</p>
+            <p><span>&gt;</span> следующий трек</p>
+            <p class="reply">Music is playing.</p>
+            <p><span>&gt;</span> что в буфере обмена</p>
+            <p class="reply">hello again</p>
+            <p><span>&gt;</span> сколько свободного места на диске</p>
+            <p class="reply">Free disk space: 15 GB of 460 GB available.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="features">
+        <article class="feature">
+          <h2>Открывает и управляет</h2>
+          <p>Finder, Safari, Downloads, Documents, Pictures, Music и системные действия вроде громкости.</p>
+        </article>
+        <article class="feature">
+          <h2>Помнит простое</h2>
+          <p>Имя, предпочтения, последние действия и открытые приложения сохраняются между запусками.</p>
+        </article>
+        <article class="feature">
+          <h2>Не тратит лишнее</h2>
+          <p>Работает через Ollama и локальные инструменты. Это больше похоже на полезный терминальный ассистент, чем на чат.</p>
+        </article>
+      </section>
+
+      <section class="commands">
+        <div class="section-head">
+          <p class="eyebrow">Поддерживаемые фразы</p>
+          <h2>Что умеет сейчас</h2>
+        </div>
+        <div class="chips">
+          <span>включи музыку</span>
+          <span>следующий трек</span>
+          <span>открой downloads</span>
+          <span>открой desktop</span>
+          <span>что я люблю?</span>
+          <span>что в буфере обмена</span>
+          <span>громче</span>
+          <span>скопируй: hello</span>
+        </div>
+      </section>
+
+      <section class="footer-card">
+        <div>
+          <p class="eyebrow">Free GitHub Pages</p>
+          <h2>Без домена, без лишней настройки</h2>
+        </div>
+        <p>
+          Сайт можно держать бесплатно на GitHub Pages, а сам CLI уже доступен как <code>clama</code>.
+        </p>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

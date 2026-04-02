@@ -2,6 +2,8 @@
 
 Small Claude-inspired CLI agent that talks to a local Ollama model through the OpenAI-compatible API.
 
+Website: https://acast.github.io/clama/
+
 ## Requirements
 
 - Node.js 18+
