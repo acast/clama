@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/logo.png" alt="Clama logo" width="360" />
+</p>
+
 # Clama
 
 A local AI assistant for your Mac. No cloud. No noise. Just commands.
