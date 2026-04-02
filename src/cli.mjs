@@ -256,40 +256,64 @@ function formatKnownMemory(memory) {
 
 function queryMemoryAnswer(prompt, memory) {
   const text = normalizeText(prompt);
+  const english = containsAny(text, [
+    "what do i like",
+    "what do i love",
+    "what do i enjoy",
+    "what is my name",
+    "who am i",
+    "what am i called",
+    "what don't i like",
+    "what do i dislike",
+    "what did i do",
+    "what did i open",
+    "recent actions",
+    "what apps did i open",
+  ]);
 
   if (containsAny(text, ["что я люблю", "что мне нравится", "what do i like", "what do i love", "what do i enjoy"])) {
     if (memory.likes.length) {
+      if (english) return `You said you like ${memory.likes.join(", ")}.`;
       return `Вы говорили, что любите ${memory.likes.join(", ")}.`;
     }
+    if (english) return "I don't know what you like yet.";
     return "Пока не знаю, что вы любите.";
   }
 
   if (containsAny(text, ["как меня зовут", "что меня зовут", "what is my name", "who am i", "what am i called"])) {
     if (memory.name) {
+      if (english) return `You said your name is ${memory.name}.`;
       return `Вы говорили, что вас зовут ${memory.name}.`;
     }
+    if (english) return "I don't know your name yet.";
     return "Пока не знаю, как вас зовут.";
   }
 
   if (containsAny(text, ["что я не люблю", "что мне не нравится", "what don't i like", "what do i dislike"])) {
     if (memory.dislikes.length) {
+      if (english) return `You said you don't like ${memory.dislikes.join(", ")}.`;
       return `Вы говорили, что вам не нравится ${memory.dislikes.join(", ")}.`;
     }
+    if (english) return "I don't know what you dislike yet.";
     return "Пока не знаю, что вам не нравится.";
   }
 
   if (containsAny(text, ["что я делал", "последнее действие", "what did i do", "what did i open", "recent actions"])) {
     if (memory.recent_actions.length) {
       const recent = memory.recent_actions.slice(-3).reverse();
+      if (english) return `Recent actions:\n${recent.map((item) => `- ${item.summary}`).join("\n")}`;
       return `Последние действия:\n${recent.map((item) => `- ${item.summary}`).join("\n")}`;
     }
+    if (english) return "I don't have any saved actions yet.";
     return "Пока нет сохраненных действий.";
   }
 
   if (containsAny(text, ["что я открывал", "какие приложения я открывал", "what apps did i open"])) {
     if (memory.last_opened_apps.length) {
+      if (english) return `Recent apps you opened: ${memory.last_opened_apps.join(", ")}.`;
       return `Последние открытые приложения: ${memory.last_opened_apps.join(", ")}.`;
     }
+    if (english) return "I don't have any saved apps yet.";
     return "Пока нет сохраненных приложений.";
   }
 
@@ -693,6 +717,7 @@ function toolPrompt() {
 
 Work inside this workspace only: ${WORKSPACE}
 You can use the recent conversation history below as context.
+Respond in the user's language. Support English and Russian equally.
 
 Available tools:
 ${tools}
@@ -706,6 +731,7 @@ Rules:
 - Keep tool arguments minimal and correct.
 - If a command fails, inspect the error and try a better next step.
 - If the user asks for a local computer action, prefer tools over explanation.
+- Understand natural language commands in both English and Russian.
 - For macOS app launch, use open_app.
 - For opening folders/files, use open_path.
 - For Music playback controls, use music_control.

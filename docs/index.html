@@ -1,18 +1,15 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Clama — локальный ассистент для macOS и Ollama</title>
+    <title>Clama - local AI assistant for macOS and Ollama</title>
     <meta
       name="description"
-      content="Clama — локальный помощник для macOS и Ollama. Открывает приложения, управляет музыкой, читает файлы и запоминает простые факты."
+      content="Clama is a local assistant for macOS and Ollama. It opens apps, controls music, reads files, and remembers simple facts."
     />
     <meta name="theme-color" content="#f7f4ef" />
-    <link
-      rel="icon"
-      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop stop-color="%2322d3c5"/><stop offset="55%" stop-color="%237b4dff"/><stop offset="100%" stop-color="%23e01ed3"/></linearGradient></defs><rect width="64" height="64" rx="18" fill="%23fff"/><path d="M14 18c0-2 1.6-3.6 3.6-3.6h28.8C48.4 14.4 50 16 50 18v17.3c0 2-1.6 3.6-3.6 3.6H29.5L18 50v-11.1h-0.4C15.6 38.9 14 37.3 14 35.3V18Z" fill="url(%23g)"/></svg>'
-    />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -21,23 +18,23 @@
     <main class="page">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Локальный ассистент для macOS и Ollama</p>
+          <p class="eyebrow">Local AI assistant for macOS and Ollama</p>
           <h1>Clama</h1>
-          <p class="tagline">Команды, которые остаются на твоем Mac.</p>
+          <p class="tagline">Commands that stay on your Mac.</p>
           <p class="lede">
-            Clama понимает обычные фразы вроде <span>открой Safari</span>, <span>следующий трек</span>,
-            <span>что я делал?</span> и выполняет их локально, без лишней болтовни и без облачного шума.
+            Clama understands natural phrases like <span>open Safari</span>, <span>next track</span>,
+            <span>what did I do?</span>, and runs them locally with no cloud noise.
           </p>
           <div class="cta-row">
             <a class="button button-primary" href="https://github.com/acast/clama" target="_blank" rel="noreferrer">
               Open source on GitHub
             </a>
-            <button class="button button-secondary" id="copy-command" type="button">Скопировать стартовую команду</button>
+            <button class="button button-secondary" id="copy-command" type="button">Copy quick-start command</button>
           </div>
           <div class="quick-start">
-            <div class="code-label">Быстрый старт</div>
+            <div class="code-label">Quick start</div>
             <pre><code>npm link
-clama "привет"</code></pre>
+clama "hello"</code></pre>
           </div>
         </div>
 
@@ -47,56 +44,56 @@ clama "привет"</code></pre>
           </div>
           <div class="hero-caption">
             <span class="caption-chip">Clama</span>
-            <p>Белая витрина для светлого продукта и теплого локального ассистента.</p>
+            <p>A bright landing page for a warm, local assistant.</p>
           </div>
         </aside>
       </section>
 
       <section class="strip">
         <div class="strip-head">
-          <p class="eyebrow">Что делает хорошо</p>
-          <h2>Простые команды, которые работают без лишнего контекста.</h2>
+          <p class="eyebrow">What it does well</p>
+          <h2>Simple commands that work without extra context.</h2>
         </div>
         <div class="feature-list">
           <article class="feature">
-            <h3>Открывает и управляет</h3>
-            <p>Finder, Safari, Downloads, Documents, Pictures, Music и системные действия вроде громкости.</p>
+            <h3>Opens and controls</h3>
+            <p>Finder, Safari, Downloads, Documents, Pictures, Music, and system actions like volume.</p>
           </article>
           <article class="feature">
-            <h3>Помнит простое</h3>
-            <p>Имя, предпочтения, последние действия и открытые приложения сохраняются между запусками.</p>
+            <h3>Remembers simple things</h3>
+            <p>Name, preferences, recent actions, and open apps persist between sessions.</p>
           </article>
           <article class="feature">
-            <h3>Не тратит лишнее</h3>
-            <p>Работает через Ollama и локальные инструменты. Это больше похоже на полезный терминальный ассистент, чем на чат.</p>
+            <h3>Does not waste time</h3>
+            <p>It runs through Ollama and local tools. More like a useful terminal assistant than a chat app.</p>
           </article>
         </div>
       </section>
 
       <section class="commands">
         <div class="section-head">
-          <p class="eyebrow">Поддерживаемые фразы</p>
-          <h2>Что умеет сейчас</h2>
+          <p class="eyebrow">Supported phrases</p>
+          <h2>What it can do now</h2>
         </div>
         <div class="chips">
-          <span>включи музыку</span>
-          <span>следующий трек</span>
-          <span>открой downloads</span>
-          <span>открой desktop</span>
-          <span>что я люблю?</span>
-          <span>что в буфере обмена</span>
-          <span>громче</span>
-          <span>скопируй: hello</span>
+          <span>open music</span>
+          <span>next track</span>
+          <span>open downloads</span>
+          <span>open desktop</span>
+          <span>what do I like?</span>
+          <span>what's in my clipboard</span>
+          <span>volume up</span>
+          <span>copy: hello</span>
         </div>
       </section>
 
       <section class="footer-card">
         <div>
           <p class="eyebrow">Free GitHub Pages</p>
-          <h2>Без домена, без лишней настройки</h2>
+          <h2>No domain, no extra setup</h2>
         </div>
         <p>
-          Сайт можно держать бесплатно на GitHub Pages, а сам CLI уже доступен как <code>clama</code>.
+          The site can live for free on GitHub Pages, and the CLI is already available as <code>clama</code>.
         </p>
       </section>
     </main>
