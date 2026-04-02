@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "license": "MIT",
   "description": "A small Claude-inspired CLI agent for local Ollama models.",
   "bin": {
     "clama": "./src/cli.mjs"
